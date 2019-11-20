@@ -1,7 +1,10 @@
-<% @users.each_with_index do |user, index| %>
-  <div class="well user-<%= index %>">
-    <p>
-      <%= user.username %>
-    </p>
-  </div>
-<% end %>
+<ul id="slides">
+  <% @users.each do |user| %>
+    <div class="slide" data-id="<%= user.id %>">
+      <li><%= user.username %></li>
+    </div>
+  <% end %>
+</ul>
+
+<button class="controls" id="decline">No</button>
+<button class="controls" id="approve">Yes</button>
