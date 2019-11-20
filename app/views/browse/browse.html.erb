@@ -1,0 +1,7 @@
+<% @users.each_with_index do |user, index| %>
+  <div class="well user-<%= index %>">
+    <p>
+      <%= user.username %>
+    </p>
+  </div>
+<% end %>
