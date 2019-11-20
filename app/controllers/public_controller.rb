@@ -1,5 +1,4 @@
-class PublicController < ActionController::Base
+class PublicController < ApplicationController
   def home
-    render :layout => 'application'
-  end 
+  end
 end
