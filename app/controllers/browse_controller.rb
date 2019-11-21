@@ -4,8 +4,11 @@ class BrowseController < ApplicationController
   end
 
   def approve
+    # user swipes right
+    logger.debug "User id for matching is #{params[:id]}"
   end
 
   def decline
+    # user swipes left 
   end
 end
