@@ -1,24 +1,5 @@
-# README
+Tinder Clone - RoR 6 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Following this tutorial: 
+  + https://www.youtube.com/watch?v=P5gAaZq-sPs&t=141s
+  + https://www.youtube.com/watch?v=ibRVysxvOdU
