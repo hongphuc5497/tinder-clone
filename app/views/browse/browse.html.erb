@@ -1,9 +1,11 @@
 <ul id="slides">
   <% @users.each_with_index do |user, index| %>
     <div class="slide <%= 'showing' if index == 0 %>" data-id="<%= user.id %>">
-      <% byebug %>
-      <%= image_tag user.images.first, width: "200px" %>
+      <div class="image-carousel" style="background-image: url('<%= url_for user.images.first if user.images.attached? %>')">
+      </div>
+      <span class="user-details">
       <li><%= user.username %></li>
+      </span>
     </div>
   <% end %>
 </ul>

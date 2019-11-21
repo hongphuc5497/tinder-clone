@@ -39,6 +39,22 @@
   }
 }
 
+.image-carousel {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user-details {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
+}
 // .slide:nth-of-type(1) {
 //   background: red;
 // }
