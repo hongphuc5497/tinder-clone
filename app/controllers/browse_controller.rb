@@ -7,6 +7,11 @@ class BrowseController < ApplicationController
     # byebug
   end
 
+  def matches 
+    @matches = current_account.matches
+    # byebug  
+  end 
+
   def approve
     account_id = params[:id]
     # user swipes right
