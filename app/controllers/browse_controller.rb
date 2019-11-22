@@ -1,6 +1,10 @@
 class BrowseController < ApplicationController
   def browse
-    @users = Account.where.not(id: current_account.id) 
+    liked_account_ids = Like.where(account_id: current_account.id).map(&:liked_account_id)
+    liked_account_ids. << current_account.id
+
+    @users = Account.where.not(id: liked_account_ids) 
+    # byebug
   end
 
   def approve
@@ -16,7 +20,6 @@ class BrowseController < ApplicationController
       # check if user already likes us back
       existing_like = Like.where(account_id: account_id, liked_account_id: current_account.id).count
       @they_like_us = existing_like > 0
-      byebug
     else
       #issue saving like - return a warning message 
     end  
