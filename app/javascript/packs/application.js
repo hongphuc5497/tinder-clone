@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 
 require("bootstrap")
 require("../includes/slide.js")
+require("../includes/matches.js")
 import "@fortawesome/fontawesome-free/css/all.css";
 // import "@fortawesome/fontawesome-free/js/all";
 // Uncomment to copy all static images under ../images to the output folder and reference

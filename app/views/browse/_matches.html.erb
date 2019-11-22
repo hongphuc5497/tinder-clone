@@ -3,7 +3,11 @@
     <% @matches.each do |match| %>
       <div class="col-sm-4">
         <% if match.images.attached? %>
-          <%= image_tag match.images.first, class: "img-fluid" %>
+          <div class="match-tile rounded" data-id="<%= match.id %>" style="background-image: url('<%= url_for match.images.first %>')">
+          <p class="text-white">
+            <%= match.username %>
+          </p>
+          </div>         
         <% end %> 
       </div>
     <% end %>
