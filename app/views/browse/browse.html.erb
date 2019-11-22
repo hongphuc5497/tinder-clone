@@ -1,22 +1,35 @@
-<ul id="slides">
-  <% @users.each_with_index do |user, index| %>
-    <div class="slide <%= 'showing' if index == 0 %>" data-id="<%= user.id %>">
-      <div class="image-carousel" style="background-image: url('<%= url_for user.images.first if user.images.attached? %>')">
-      </div>
-      <div class="user-details">
-        <span class="user-name"><%= user.username %></span>, <small>31</small><br/>
-        <i class="fas fa-graduation-cap mr-1"></i>Job /Studies<br/>
-        <i class="fas fa-map-marker mr-3"></i>Location
+<div class="container">
+  <div class="row">
+    <div class="col-3 col-md-4">
+      <%= render "browse/matches" %>
+    </div>
+
+    <div class="col-9 col-md-8">
+      <ul id="slides">
+        <% @users.each_with_index do |user, index| %>
+          <div class="slide <%= 'showing' if index == 0 %>" data-id="<%= user.id %>">
+            <div class="image-carousel" style="background-image: url('<%= url_for user.images.first if user.images.attached? %>')">
+            </div>
+
+            <div class="user-details">
+              <span class="user-name"><%= user.username %></span>, <small>31</small><br/>
+              <i class="fas fa-graduation-cap mr-1"></i>Job /Studies<br/>
+              <i class="fas fa-map-marker mr-3"></i>Location
+            </div>
+          </div>
+        <% end %>
+      </ul>
+
+      <div id="slide-controls">
+        <span id="decline">
+          <i class="fas fa-times-circle fa-3x"></i>
+        </span>
+        <span id="approve">
+          <i class="fas fa-heart fa-3x"></i>
+        </span>
       </div>
     </div>
-  <% end %>
-</ul>
-
-<div id="slide-controls">
-  <span id="decline">
-    <i class="fas fa-times-circle fa-3x"></i>
-  </span>
-  <span id="approve">
-    <i class="fas fa-heart fa-3x"></i>
-  </span>
+  </div>
 </div>
+
+
