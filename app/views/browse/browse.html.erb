@@ -1,11 +1,10 @@
-<div class="container">
-  <div class="row">
-    <div class="col-3 col-md-4">
+<div class="row">
+  <div class="col-3 col-md-4 bg-white ">
       <%= render "browse/matches" %>
-    </div>
+  </div>
 
-    <div class="col-9 col-md-8">
-      <ul id="slides">
+  <div class="col-9 col-md-8">
+    <ul id="slides">
         <% @users.each_with_index do |user, index| %>
           <div class="slide <%= 'showing' if index == 0 %>" data-id="<%= user.id %>">
             <div class="image-carousel" style="background-image: url('<%= url_for user.images.first if user.images.attached? %>')">
@@ -18,16 +17,15 @@
             </div>
           </div>
         <% end %>
-      </ul>
+    </ul>
 
-      <div id="slide-controls">
+    <div id="slide-controls">
         <span id="decline">
           <i class="fas fa-times-circle fa-3x"></i>
         </span>
         <span id="approve">
           <i class="fas fa-heart fa-3x"></i>
         </span>
-      </div>
     </div>
   </div>
 </div>
